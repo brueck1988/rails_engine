@@ -21,22 +21,22 @@ RSpec.describe Invoice, type: :model do
     @item_4 = create(:item, merchant: @merchant_4)
     @item_5 = create(:item, merchant: @merchant_5)
 
-    @invoice_item_1 = create(:invoice_item, item_id: @item_1.id, invoice_id: @invoice_1.id, status: "packaged", quantity: 1, unit_price: 30)
-    @invoice_item_2 = create(:invoice_item, item_id: @item_2.id, invoice_id: @invoice_2.id, status: "pending", quantity: 100, unit_price: 3)
-    @invoice_item_3 = create(:invoice_item, item_id: @item_3.id, invoice_id: @invoice_3.id, status: "pending", quantity: 100, unit_price: 2)
-    @invoice_item_4 = create(:invoice_item, item_id: @item_4.id, invoice_id: @invoice_4.id, status: "packaged", quantity: 100, unit_price: 4)
-    @invoice_item_5 = create(:invoice_item, item_id: @item_5.id, invoice_id: @invoice_5.id, status: "packaged", quantity: 100, unit_price: 5)
+    @invoice_item_1 = create(:invoice_item, item_id: @item_1.id, invoice_id: @invoice_1.id, quantity: 1, unit_price: 30)
+    @invoice_item_2 = create(:invoice_item, item_id: @item_2.id, invoice_id: @invoice_2.id, quantity: 100, unit_price: 3)
+    @invoice_item_3 = create(:invoice_item, item_id: @item_3.id, invoice_id: @invoice_3.id, quantity: 100, unit_price: 2)
+    @invoice_item_4 = create(:invoice_item, item_id: @item_4.id, invoice_id: @invoice_4.id, quantity: 100, unit_price: 4)
+    @invoice_item_5 = create(:invoice_item, item_id: @item_5.id, invoice_id: @invoice_5.id, quantity: 100, unit_price: 5)
 
   end
 
-  describe 'instance methods' do
-    describe '#total_revenue' do
-      it 'shows the total revenue for an invoice' do
-
-      expect(@invoice_1.total_revenue).to eq(30)
-      expect(@invoice_2.total_revenue).to eq(300)
-      expect(@invoice_3.total_revenue).to eq(200)
-      end
-    end
-  end
+  # describe 'instance methods' do
+  #   describe '#total_revenue' do
+  #     it 'shows the total revenue for an invoice' do
+  # 
+  #     expect(@invoice_1.total_revenue).to eq(30)
+  #     expect(@invoice_2.total_revenue).to eq(300)
+  #     expect(@invoice_3.total_revenue).to eq(200)
+  #     end
+  #   end
+  # end
 end
