@@ -1,4 +1,4 @@
-class API::V1::MerchantsController < API::APIController
+class API::V1::MerchantsController < ApplicationController
   
   MERCHANTS_PER_PAGE = 20
   
@@ -9,11 +9,11 @@ class API::V1::MerchantsController < API::APIController
   end
   
   def show
-    if Merchant.find_by(id: params[:id])
-      merchant = Merchant.find_by(id: params[:id])
+    # if Merchant.find_by(id: params[:id])
+      merchant = Merchant.find(params[:id])
       render json: MerchantSerializer.new(merchant)
-    else
-      raise ActionController::RoutingError.new('Not Found')
-    end
+    # else
+    #   render json: {error: 'not found'}, status: 404
+    # end
   end
 end
