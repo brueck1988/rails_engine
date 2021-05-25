@@ -1,19 +1,13 @@
-class API::V1::MerchantsController < ApplicationController
-  
-  MERCHANTS_PER_PAGE = 20
-  
+class API::V1::MerchantsController < ApplicationController  
   def index
-    page = params.fetch(:page, 0).to_i
-    merchants = Merchant.offset(page*MERCHANTS_PER_PAGE).limit(MERCHANTS_PER_PAGE)
+    page = [params.fetch(:page, 1).to_i, 1].max
+    per_page = params.fetch(:per_page, 20).to_i
+    merchants = Merchant.offset((page-1)*per_page).limit(per_page)
     render json: MerchantSerializer.new(merchants)
   end
   
   def show
-    # if Merchant.find_by(id: params[:id])
-      merchant = Merchant.find(params[:id])
-      render json: MerchantSerializer.new(merchant)
-    # else
-    #   render json: {error: 'not found'}, status: 404
-    # end
+    merchant = Merchant.find(params[:id])
+    render json: MerchantSerializer.new(merchant)
   end
 end
