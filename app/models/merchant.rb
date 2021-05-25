@@ -7,5 +7,5 @@ class Merchant < ApplicationRecord
   has_many :customers, through: :invoices
   has_many :transactions, through: :invoices
 
-  enum status: [ :disabled, :enabled ]
+  # enum status: [ :disabled, :enabled ]
 end
