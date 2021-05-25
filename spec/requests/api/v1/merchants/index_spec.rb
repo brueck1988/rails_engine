@@ -47,9 +47,8 @@ RSpec.describe 'Merchants API' do
       get '/api/v1/merchants?page=6'
       
       merchants = JSON.parse(response.body, symbolize_names: true)[:data]
-      require "pry";binding.pry
-      expect(response).to be_unsuccessful
-      expect(merchants.count).to eq(20)
+      expect(response).to be_successful
+      expect(merchants.count).to eq(0)
     end
   end
 end
