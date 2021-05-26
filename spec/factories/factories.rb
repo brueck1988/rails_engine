@@ -10,9 +10,7 @@ FactoryBot.define do
   end
 
   factory :merchant do
-    # status = [ 0, 1 ]
     name {Faker::Company.name}
-    # status { status.sample }
   end
 
   factory :item do
