@@ -1,6 +1,6 @@
 class MerchantSerializer
   include FastJsonapi::ObjectSerializer
-  attributes :id, :name
+  attributes :name
 end
 
 # has_many :books
