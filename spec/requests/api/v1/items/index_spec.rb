@@ -1,5 +1,5 @@
 require 'rails_helper'
-RSpec.describe 'Items API' do
+RSpec.describe 'Items Index API' do
   before :each do
     create_list(:item, 100)
   end

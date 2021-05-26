@@ -1,5 +1,5 @@
 require 'rails_helper'
-RSpec.describe 'Item API' do
+RSpec.describe 'Item Show API' do
   before :each do
     @item = create(:item)
   end

@@ -19,7 +19,3 @@ RSpec.describe 'Merchant Items API' do
     expect(response.status).to eq(404)
   end
 end
-
-      
-      
-      

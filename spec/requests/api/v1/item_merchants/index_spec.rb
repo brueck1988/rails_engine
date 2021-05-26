@@ -1,8 +1,8 @@
 require 'rails_helper'
 RSpec.describe 'Item Merchants API' do
   before :each do
-    @merchant = create(:merchant)
-    @item = create(:item, merchant: @merchant)
+    merchant = create(:merchant)
+    @item = create(:item, merchant: merchant)
   end
   
   it 'happy path, fetch all merchants' do
