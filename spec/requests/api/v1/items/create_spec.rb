@@ -12,9 +12,9 @@ RSpec.describe 'Items Create API' do
                    unit_price: 70.23,
                    merchant_id: @merchant.id
                  }       
-    headers = {'CONTENT_TYPE' => 'application/json'}
+    content_type = {'CONTENT_TYPE' => 'application/json'}
     
-    post '/api/v1/items', headers: headers, params: JSON.generate(item: item_params)
+    post '/api/v1/items', headers: content_type, params: JSON.generate(item: item_params)
     
     item = Item.last
     
