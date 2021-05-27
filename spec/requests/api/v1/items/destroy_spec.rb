@@ -12,7 +12,7 @@ RSpec.describe 'Items Destroy API' do
     
     expect(response).to be_successful
     expect(Item.count).to eq(0)
-    expect(response.status).to eq(204)
+    expect(response.status).to eq(200)
   end
 end
 
