@@ -1,0 +1,14 @@
+language: ruby
+rbenv:
+- 2.5.3
+addons:
+  postgresql: 9.6
+script:
+- bundle exec rails db:{create,migrate} RAILS_ENV=test
+- bundle exec rspec
+deploy:
+  provider: heroku
+  api_key:
+    secure: 7c7b2cb251c98077305b6df2390f63edd810ac4e42ed1792990737261c6a85a24ee86586ad984a5b84b3397db8dceed5467777086b8a2bc2fb7f2755ff139d5c
+  app:
+  run: rails db:migrate
