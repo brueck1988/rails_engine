@@ -8,14 +8,20 @@ You are working for a company developing an E-Commerce Application. Your team is
 [![Build Status][travis-image]][travis-url]
 [![Downloads Stats][npm-downloads]][npm-url]
 
-One to two paragraph statement about your product and what it does.
+###Learning Goals
+
+Expose an API
+Use serializers to format JSON responses
+Test API exposure
+Compose advanced ActiveRecord queries to analyze information stored in SQL databases
+Write basic SQL statements without the assistance of an ORM
 
 ![](header.png)
 
 ## Configuration
 
-* Ruby version - ruby 2.5.3
-* Rails version - ruby 2.5.3
+* Ruby version - 2.5.3
+* Rails version - 5.2.6
 
 ## Local Setup
 
