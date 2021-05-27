@@ -21,6 +21,18 @@ RSpec.describe 'Items Update API' do
     expect(response.status).to eq(200)
     expect(updated_item.description).to eq("Poodles745")
   end
+  
+  it 'updates item that incorrect merchant id' do
+    expect(Item.count).to eq(1)
+
+    original_description = @item.description
+    new_merchant_id = {merchant_id: 8373838}
+    content_type = {"CONTENT_TYPE" => "application/json"}
+  
+    patch "/api/v1/items/#{@item.id}", headers: content_type, params: JSON.generate(item: new_merchant_id)
+
+    expect(response.status).to eq(400)
+  end
 end
 
       

@@ -13,4 +13,3 @@ class ApplicationController < ActionController::API
   end
 end
 
-#422 "Unprocessable Entity"
