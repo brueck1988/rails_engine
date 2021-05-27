@@ -1,6 +1,6 @@
 # README
 
-* ...
+
 # Rails Engine
 You are working for a company developing an E-Commerce Application. Your team is working in a service-oriented architecture, meaning the front and back ends of this application are separate and communicate via APIs. Your job is to expose the data that powers the site through an API that the front end will consume.
 
@@ -8,7 +8,7 @@ You are working for a company developing an E-Commerce Application. Your team is
 [![Build Status][travis-image]][travis-url]
 [![Downloads Stats][npm-downloads]][npm-url]
 
-###Learning Goals
+## Learning Goals
 
 Expose an API
 Use serializers to format JSON responses
