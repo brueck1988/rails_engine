@@ -1,7 +1,8 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
 RSpec.describe ApplicationRecord, type: :model do
-
   # describe 'instance methods' do
   #   it "#formatted_unit_price" do
   #     item = create(:item, unit_price: 200)

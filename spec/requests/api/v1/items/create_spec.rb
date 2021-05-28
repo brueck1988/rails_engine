@@ -1,27 +1,29 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
-RSpec.describe 'Items Create API' do  
+RSpec.describe 'Items Create API' do
   before :each do
     @merchant = create(:merchant)
-  end 
-  
+  end
+
   it 'creates item that has a merchant associated with it' do
     expect(Item.count).to eq(0)
     item_params = {
-                   name: "Liberica",
-                   description: "Organic pickled intelligentsia coffee.",
-                   unit_price: 70.23,
-                   merchant_id: @merchant.id
-                 }       
-    content_type = {'CONTENT_TYPE' => 'application/json'}
-    
+      name: 'Liberica',
+      description: 'Organic pickled intelligentsia coffee.',
+      unit_price: 70.23,
+      merchant_id: @merchant.id
+    }
+    content_type = { 'CONTENT_TYPE' => 'application/json' }
+
     post '/api/v1/items', headers: content_type, params: JSON.generate(item: item_params)
-    
+
     item = Item.last
-    
+
     expect(response).to be_successful
     expect(Item.count).to eq(1)
     expect(response.status).to eq(201)
-    
+
     expect(item.name).to eq(item_params[:name])
     expect(item.description).to eq(item_params[:description])
     expect(item.unit_price).to eq(item_params[:unit_price])

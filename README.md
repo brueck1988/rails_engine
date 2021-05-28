@@ -22,12 +22,19 @@ Test API exposure
 Compose advanced ActiveRecord queries to analyze information stored in SQL databases
 Write basic SQL statements without the assistance of an ORM
 
-![](header.png)
-
-## Configuration
-
-* Ruby version - 2.5.3
-* Rails version - 5.2.6
+## Technologies
+Project is created with:
+* Ruby version 2.5.3
+* Rails version 5.2.6
+* PostgreSQL
+* RSpec
+* Capybara
+* Factorybot
+* Faker
+* RuboCop
+* SimpleCov
+* Travis CI
+* Heroku
 
 ## Local Setup
 
@@ -35,12 +42,12 @@ Write basic SQL statements without the assistance of an ORM
 2. Install gem packages: `bundle install`
 3. Setup the database: `rails db:{drop,create,migrate,seed}`
 
-## Meta
+## Created by:
 
 Alexander Brueck – [@Brueck](https://twitter.com/dbader_org) • [LinkedIn](https://www.linkedin.com/in/alexander-brueck-5b952261/)
 
 
-## Contributing
+##### Contributing
 
 1. Fork it (<https://github.com/brueck1988/rails_engine/fork>)
 2. Create your feature branch (`git checkout -b feature/fooBar`)

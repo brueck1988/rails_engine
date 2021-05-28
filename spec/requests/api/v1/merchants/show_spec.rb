@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 RSpec.describe 'Merchant API' do
   before :each do
@@ -17,11 +19,8 @@ RSpec.describe 'Merchant API' do
 
   it 'sad path, bad integer id returns 404' do
     get '/api/v1/merchants/9000'
-    
+
     expect(response).to_not be_successful
     expect(response.status).to eq(404)
   end
 end
-
-
-      
