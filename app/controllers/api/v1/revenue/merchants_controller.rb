@@ -5,6 +5,7 @@ module API
     module Revenue
       class MerchantsController < ApplicationController
         def index
+          quantity = params.fetch(:quantity).to_i
           merchants = Merchant.total_revenue(params[:quantity])
           render json: MerchantNameRevenueSerializer.new(merchants)
         end
