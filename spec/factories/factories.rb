@@ -23,13 +23,13 @@ FactoryBot.define do
   end
 
   factory :transaction do
-    result { [0, 1].sample }
+    result { ["failed", "success", "refunded"].sample }
     credit_card_number { Faker::Finance.credit_card }
+    credit_card_expiration_date { Faker::Finance.credit_card }
     invoice
   end
 
   factory :invoice_item do
-    # status {[0,1,2].sample}
     invoice
     item
   end
